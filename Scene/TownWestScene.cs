@@ -18,12 +18,14 @@ namespace OOPConsoleProject.Scene
         }
         public override void Input()
         {
-            
+            input = Console.ReadKey(true).Key;
         }
         public override void Result()
         {
+            string targetScene = "";
             switch (input)
             {
+                
                 case ConsoleKey.D1:
                     Console.WriteLine("빅터의 오두막으로 들어갑니다");
                     Game.ChangeScene("VictorShack");
@@ -35,6 +37,11 @@ namespace OOPConsoleProject.Scene
                 default:
                     Console.WriteLine("잘못된 키를 입력하셨습니다");
                     break;
+            }
+            if(targetScene != "")
+            {
+                Console.ReadKey();
+                Game.ChangeScene(targetScene);
             }
         }
 

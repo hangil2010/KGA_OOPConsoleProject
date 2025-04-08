@@ -38,7 +38,7 @@ namespace OOPConsoleProject
             return result;
         }
 
-        public static void Print(string context, ConsoleColor backColor = ConsoleColor.Black, ConsoleColor textColor = ConsoleColor.White, int delay = 2000)
+        public static void Print(string context, ConsoleColor backColor = ConsoleColor.Black, ConsoleColor textColor = ConsoleColor.White, int delay = 1500)
         {
             Console.BackgroundColor = backColor;
             Console.ForegroundColor = textColor;

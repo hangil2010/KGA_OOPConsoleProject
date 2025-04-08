@@ -17,7 +17,7 @@ namespace OOPConsoleProject.Scene
         public override void Render()
         {
             Game.player.PrintInfo();
-            if (!Game.gameProgess[0]) 
+            if (!Game.progess[0]) 
             { 
                 //Util.Print("이정도면 충분하네, 움직일 수 있는걸 보니 다행이군\n");
                 //Util.Print("나중에 돌아다니다가 다치거나 하면 바로 오게나\n");
@@ -27,7 +27,15 @@ namespace OOPConsoleProject.Scene
             }
             else
             {
-                //Util.Print("다시 왔네, 반갑다\n");
+                
+                if(Game.player.CurrentHealth < Game.player.MaxHealth)
+                {
+                    Console.WriteLine("좀 다쳤나 보군, 치료가 필요한가?");
+                }
+                else
+                {
+                    Console.WriteLine("건강하게 잘 지내는걸 보니 다행이군.");
+                }
             }
             Console.WriteLine("마을 밖으로 나간다");
             Console.WriteLine("아무 키나 눌러 진행");
@@ -43,7 +51,7 @@ namespace OOPConsoleProject.Scene
 
         public override void Update()
         {
-            Game.gameProgess[0] = true;
+            Game.progess[0] = true;
         }
     }
 }

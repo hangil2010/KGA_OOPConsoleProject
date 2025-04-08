@@ -18,7 +18,7 @@ namespace OOPConsoleProject.Scene
         public override void Render()
         {
             Game.player.PrintInfo();
-            if (!Game.gameProgess[1])
+            if (!Game.progess[1])
             {
                 //Util.Print("빅터", textColor : ConsoleColor.Green);
                 //Util.Print(" : 오 친구! 깨어났네!\n");
@@ -71,7 +71,7 @@ namespace OOPConsoleProject.Scene
 
         public override void Update()
         {
-            Game.gameProgess[1] = true;
+            Game.progess[1] = true;
         }
     }
 }

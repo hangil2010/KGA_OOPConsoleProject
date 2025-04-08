@@ -19,6 +19,7 @@ namespace OOPConsoleProject.Scene
         }
         public override void Input()
         {
+            input = Console.ReadKey(true).Key;
         }
         public override void Result()
         {
@@ -40,6 +41,7 @@ namespace OOPConsoleProject.Scene
                     Console.WriteLine("잘못된 키를 입력하셨습니다");
                     break;
             }
+            Console.ReadKey();
         }
 
         public override void Update()

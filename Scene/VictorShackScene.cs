@@ -16,7 +16,9 @@ namespace OOPConsoleProject.Scene
 
         public override void Render()
         {
-            Console.WriteLine("빅터의 오두막이다");
+            Console.WriteLine("빅터의 오두막");
+            Console.WriteLine("나를 구해줬던 친절한 이웃이 살고 있는 집이다.");
+
         }
 
         public override void Result()

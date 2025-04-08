@@ -28,6 +28,7 @@ namespace OOPConsoleProject
             {"VictorShack", new VictorShackScene() },
             {"WaterTank", new WaterTankScene() },
             {"Intro", new IntroScene() },
+            {"ChetShop", new ChetShopScene() },
         };
         private static BaseScene curScene;
         private static string prevSceneName;
@@ -36,11 +37,19 @@ namespace OOPConsoleProject
 
         // 게임 진행도 체크용
         // 1. 신규 캐릭터를 생성했나?
-        public static bool[] gameProgess = new bool[]
+        public static bool[] progess = new bool[]
         {
             //0. 신규 캐릭터를 생성했나?
             false,
             //1. 빅터와 첫 대화를 나눴나?
+            false,
+            //2. 술집에서 조 콥의 소동을 목격했는가?
+            false,
+            //3. 술집의 라디오를 고쳤는가?
+            false,
+            //4. 트루디한테 링고의 위치에 대해 들었는가?
+            false,
+            //5. 링고를 만났는가?
             false,
         };
         public static void Run()
