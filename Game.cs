@@ -33,6 +33,9 @@ namespace OOPConsoleProject
         private static BaseScene curScene;
         private static string prevSceneName;
         private static bool gameOver;
+        public static bool GameOver {  get { return gameOver; } set { gameOver = value; } }
+        private static bool gameClear;
+        public static bool GameClear { get { return gameClear; } set { gameClear = value; } }
         public static Player player = new Player();
 
         // 게임 진행도 체크용
@@ -49,13 +52,13 @@ namespace OOPConsoleProject
             false,
             //4. 트루디한테 링고의 위치에 대해 들었는가?
             false,
-            //5. 링고를 만났는가?
+            //5. 링고를 만나고 파우더 갱을 내보내기로 하였는가?
             false,
         };
         public static void Run()
         {
             Start();
-            while (!gameOver)
+            while (gameOver == false && gameClear == false)
             {
                 Console.Clear();
                 curScene.Render();
@@ -63,6 +66,7 @@ namespace OOPConsoleProject
                 curScene.Update();
                 curScene.Result();
             }
+            End();
         }
 
         public static void Start()
@@ -73,7 +77,7 @@ namespace OOPConsoleProject
 
         public static void End()
         {
-
+            Console.WriteLine("게임 끝");
         }
 
         public static void ChangeScene(string sceneName)

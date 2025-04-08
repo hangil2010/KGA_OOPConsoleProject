@@ -93,6 +93,7 @@ namespace OOPConsoleProject.Scene
                         break;
                     case ConsoleKey.E:
                         targetScene = "TownEast";
+                        Console.WriteLine("마을 동쪽으로 나갑니다");
                         break;
                     default:
                         Console.WriteLine("잘못된 입력입니다");

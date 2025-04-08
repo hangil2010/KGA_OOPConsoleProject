@@ -9,7 +9,7 @@ namespace OOPConsoleProject
 {
     public class Player
     {
-        private int strength = 0;
+        private int strength = 8;
         public int Strength { get { return strength; } set { strength = value; } }
         private int percepction = 0;
         public int Percepction { get { return percepction; } set { percepction = value; } }
@@ -17,7 +17,7 @@ namespace OOPConsoleProject
         private int endurance = 0;
         public int Endurance { get { return endurance; } set { endurance = value; } }
 
-        private int charisma = 0;
+        private int charisma = 8;
         public int Charisma { get { return charisma; } set { charisma = value; } }
 
         private int intelligence = 0;
