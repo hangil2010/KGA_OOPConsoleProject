@@ -14,11 +14,10 @@
 
         public override void Input()
         {
-            Game.key = Console.ReadKey(true).Key;
         }
         public override void Result()
         {
-            switch (Game.key)
+            switch (input)
             {
                 case ConsoleKey.N:
                     Console.WriteLine("마을 북쪽으로 갑니다");

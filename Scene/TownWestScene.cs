@@ -18,11 +18,11 @@ namespace OOPConsoleProject.Scene
         }
         public override void Input()
         {
-            Game.key = Console.ReadKey(false).Key;
+            
         }
         public override void Result()
         {
-            switch (Game.key)
+            switch (input)
             {
                 case ConsoleKey.D1:
                     Console.WriteLine("빅터의 오두막으로 들어갑니다");

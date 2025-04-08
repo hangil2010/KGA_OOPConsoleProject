@@ -9,6 +9,7 @@ namespace OOPConsoleProject
     public abstract class BaseScene
     {
         public string name;
+        protected ConsoleKey input;
         public abstract void Render();
         public abstract void Input();
         public abstract void Update();

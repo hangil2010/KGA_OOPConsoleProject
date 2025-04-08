@@ -29,7 +29,12 @@ namespace OOPConsoleProject
         private int luck = 0;
         public int Luck { get { return luck; } set { luck = value; } }
 
-        public void PrintStat()
+        private int maxHealth = 100;
+        public int MaxHealth { get { return maxHealth; } set { maxHealth = value; } }
+
+        private int currentHealth;
+        public int CurrentHealth { get { return currentHealth; } set {  currentHealth = value; } }
+        public void PrintInfo()
         {
             Console.WriteLine("===================================");
             PrintSpecial();
@@ -81,10 +86,13 @@ namespace OOPConsoleProject
             Console.Clear();
             Console.WriteLine("최종 능력치");
             PrintSpecial();
+            maxHealth += endurance * 10;
+            currentHealth = maxHealth;
         }
         public void PrintSpecial()
         {
             Console.WriteLine($"힘 : {strength}, 감각 : {percepction}, 근성 : {endurance}, 매력 : {charisma}, 지능 : {intelligence}, 민첩 : {agility}, 행운 : {luck}");
+            Console.WriteLine($"최대 체력 : {maxHealth}, 현재 체력 : {currentHealth}");
         }
     }
 }

@@ -12,6 +12,7 @@ namespace OOPConsoleProject.Scene
 
         public override void Render()
         {
+            Game.player.PrintInfo();
             Console.WriteLine("버려진 오두막");
             Console.WriteLine("아무도 없는 듯 합니다..");
         }
