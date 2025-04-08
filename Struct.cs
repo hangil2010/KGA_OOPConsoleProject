@@ -24,4 +24,27 @@ namespace OOPConsoleProject
             return left.x != right.x || left.y != right.y;
         }
     }
+
+    public class Util
+    {
+        public static int IntInput(int start, int end)
+        {
+            int result = 0;
+            Console.WriteLine($"{start}이상 {end}이하 숫자를 입력하세요");
+            while (!(int.TryParse(Console.ReadLine(), out result) && (start <= result && result <= end)))
+            {
+                Console.WriteLine("잘못된 입력입니다.");
+            }
+            return result;
+        }
+
+        public static void Print(string context, ConsoleColor backColor = ConsoleColor.Black, ConsoleColor textColor = ConsoleColor.White, int delay = 2000)
+        {
+            Console.BackgroundColor = backColor;
+            Console.ForegroundColor = textColor;
+            Console.Write(context);
+            Thread.Sleep(delay);
+            Console.ResetColor();
+        }
+    }
 }

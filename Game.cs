@@ -1,6 +1,7 @@
 ﻿using OOPConsoleProject.Scene;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security;
 using System.Text;
@@ -31,8 +32,16 @@ namespace OOPConsoleProject
         private static BaseScene curScene;
         private static string prevSceneName;
         private static bool gameOver;
-        public static Player player;
+        public static Player player = new Player();
         public static ConsoleKey key;
+
+        // 게임 진행도 체크용
+        // 1. 신규 캐릭터를 생성했나?
+        public static bool[] gameProgess = new bool[]
+        {
+            //0. 신규 캐릭터를 생성했나?
+            false,
+        };
         public static void Run()
         {
             Start();

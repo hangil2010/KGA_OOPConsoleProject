@@ -16,7 +16,9 @@ namespace OOPConsoleProject.Scene
 
         public override void Render()
         {
-            Console.WriteLine("캐릭터 생성 씬");
+            Console.WriteLine("새로운 캐릭터를 생성합니다");
+            Console.WriteLine("캐릭터의 능력치를 설정합니다.");
+            Console.WriteLine("아무 키나 눌러 진행하세요");
         }
         public override void Input()
         {
@@ -24,6 +26,8 @@ namespace OOPConsoleProject.Scene
         }
         public override void Result()
         {
+            Console.Clear();
+            Game.player.SetSpecial();
             Game.ChangeScene("DocHouse");
         }
 
