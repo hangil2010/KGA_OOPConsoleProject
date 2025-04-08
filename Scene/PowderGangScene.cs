@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleProject.Scene
 {
-    internal class SallonScene : BaseScene
+    internal class PowderGangScene : BaseScene
     {
-        public SallonScene() { name = "Sallon"; }
-        
+        public PowderGangScene() { name = "PowderGang"; }
 
         public override void Render()
         {
-            Console.WriteLine("탄광꾼의 술집에 들어간다");
+            Console.WriteLine("파우더 갱어들이 거주하고 있는 기지입니다");
         }
         public override void Input()
         {
@@ -21,12 +20,11 @@ namespace OOPConsoleProject.Scene
         }
         public override void Result()
         {
-            Game.ChangeScene("TownEast");
+            Game.ChangeScene("TownSouth");
         }
 
         public override void Update()
         {
-
         }
     }
 }

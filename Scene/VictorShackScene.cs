@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleProject.Scene
 {
-    internal class ShackScene : BaseScene
+    internal class VictorShackScene : BaseScene
     {
+        public VictorShackScene() { name = "VictorShack"; }
         public override void Input()
         {
-
+            Console.ReadKey();
         }
 
         public override void Render()
@@ -20,7 +21,7 @@ namespace OOPConsoleProject.Scene
 
         public override void Result()
         {
-
+            Game.ChangeScene("TownWest");
         }
 
         public override void Update()

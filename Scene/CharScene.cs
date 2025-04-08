@@ -12,15 +12,16 @@ namespace OOPConsoleProject.Scene
         {
             name = "Char";
         }
-        public override void Input()
-        {
-        }
+        
 
         public override void Render()
         {
             Console.WriteLine("캐릭터 생성 씬");
         }
-
+        public override void Input()
+        {
+            Console.ReadKey(true);
+        }
         public override void Result()
         {
             Game.ChangeScene("DocHouse");

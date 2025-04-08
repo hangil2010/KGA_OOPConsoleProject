@@ -8,17 +8,34 @@ namespace OOPConsoleProject.Scene
 {
     internal class TownWestScene : BaseScene
     {
-        public override void Input()
-        {
-        }
+        public TownWestScene() { name = "TownWestScene"; }
 
         public override void Render()
         {
             Console.WriteLine("굿 스프링스 마을 서쪽입니다");
+            Console.WriteLine("1. 빅터의 오두막으로 갑니다");
+            Console.WriteLine("C. 마을 중앙으로 갑니다");
         }
-
+        public override void Input()
+        {
+            Game.key = Console.ReadKey(false).Key;
+        }
         public override void Result()
         {
+            switch (Game.key)
+            {
+                case ConsoleKey.D1:
+                    Console.WriteLine("빅터의 오두막으로 들어갑니다");
+                    Game.ChangeScene("VictorShack");
+                    break;
+                case ConsoleKey.C:
+                    Console.WriteLine("마을 중앙으로 이동합니다");
+                    Game.ChangeScene("TownCenter");
+                    break;
+                default:
+                    Console.WriteLine("잘못된 키를 입력하셨습니다");
+                    break;
+            }
         }
 
         public override void Update()

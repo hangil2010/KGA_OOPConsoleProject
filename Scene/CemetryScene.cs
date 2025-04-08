@@ -8,9 +8,10 @@ namespace OOPConsoleProject.Scene
 {
     internal class CemetryScene : BaseScene
     {
+        public CemetryScene() { name = "Cemetry"; }
         public override void Input()
         {
-
+            Console.ReadKey();
         }
 
         public override void Render()
@@ -20,7 +21,7 @@ namespace OOPConsoleProject.Scene
 
         public override void Result()
         {
-
+            Game.ChangeScene("TownNorth");
         }
 
         public override void Update()

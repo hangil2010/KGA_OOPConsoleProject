@@ -8,17 +8,21 @@ namespace OOPConsoleProject.Scene
 {
     internal class WaterTankScene : BaseScene
     {
-        public override void Input()
-        {
-        }
+        public WaterTankScene() { name = "WaterTank"; }
+        
 
         public override void Render()
         {
             Console.WriteLine("마을 남쪽에 위치한 물 저장소이다.");
         }
 
+        public override void Input()
+        {
+            Console.ReadKey();
+        }
         public override void Result()
         {
+            Game.ChangeScene("TownSouth");
         }
 
         public override void Update()
