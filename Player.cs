@@ -101,16 +101,16 @@ namespace OOPConsoleProject
         }
         public void PrintSpecial()
         {
-            Console.WriteLine($"힘 : {strength}, 감각 : {percepction}, 근성 : {endurance}, 매력 : {charisma}, 지능 : {intelligence}, 민첩 : {agility}, 행운 : {luck}");
-            Console.WriteLine($"최대 체력 : {maxHealth}, 현재 체력 : {currentHealth}");
+            Console.WriteLine($"힘: {strength} 감각: {percepction} 근성: {endurance} 매력: {charisma} 지능: {intelligence} 민첩: {agility} 행운: {luck}");
+            Console.WriteLine($"최대 체력: {maxHealth}, 현재 체력: {currentHealth}");
         }
         public void PrintQuest()
         {
             if(quest.Count > 0)
             {
-                foreach (string str in quest)
+                for(int i = 0; i < quest.Count; i++)
                 {
-                    Console.WriteLine(str);
+                    Console.WriteLine($"{i + 1}. {quest[i]}");
                 }
             }
             else

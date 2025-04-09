@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOPConsoleProject.GameObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace OOPConsoleProject.Scene
     internal class CemetryScene : BaseScene
     {
         public CemetryScene() { name = "Cemetry"; }
-
+        private QuestItem cigar = new("누가 핀 담배", "누군가 최근에 핀 담배 입니다. 나를 쏜 그 남자들 중 한명이 핀 것 같습니다.");
 
         public override void Render()
         {
@@ -29,13 +30,27 @@ namespace OOPConsoleProject.Scene
         public override void Result()
         {
             string targetScene = "";
-            if(input != ConsoleKey.I)
+            if (input != ConsoleKey.I)
             {
                 switch (input)
                 {
                     case ConsoleKey.D1:
-                        Console.WriteLine("얕은 무덤을 조사합니다.");
-                        break;
+                        //6. 당신을 쏜 사람의 단서를 찾아냈습니까?
+                        if (!Game.progess[6]) 
+                        { 
+                            Console.WriteLine("얕은 무덤을 조사합니다.");
+                            Console.WriteLine("근처를 둘러보니 최근에 누가 핀 담배가 보였습니다.");
+                            Console.WriteLine("최근에 핀 것을 보아 당신을 쐈던 사람들 중 한명이 핀 것을 알아차립니다.");
+                            Console.WriteLine("단서를 찾아낸 당신은 담배를 주머니에 넣습니다.");
+                            Game.player.quest.Remove("당신을 쏜 사람을 찾아보자.");
+                            Game.player.Inventory.Add(cigar);
+                            Game.progess[6] = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("이미 조사했습니다");
+                        }
+                            break;
                     case ConsoleKey.D2:
                         Console.WriteLine("코요테들은 당신의 존재를 눈치채고 전투를 시작합니다.");
                         break;
@@ -53,7 +68,7 @@ namespace OOPConsoleProject.Scene
                 Game.player.Inventory.Open();
             }
 
-                Console.ReadKey(true);
+            Console.ReadKey(true);
             if (targetScene != "")
             {
                 Game.ChangeScene(targetScene);

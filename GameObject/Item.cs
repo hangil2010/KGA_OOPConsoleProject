@@ -8,8 +8,11 @@ namespace OOPConsoleProject.GameObject
 {
     public abstract class Item : GameObject
     {
+        protected bool isOneTimeUse;
+        public bool IsOneTimeUse { get { return isOneTimeUse; } }
         public Item(string name, string desc) : base(name, desc)
-        { }
+        {
+        }
 
         public override void Interact(Player player)
         {

@@ -16,7 +16,7 @@
                 Console.WriteLine("1. 파우더 갱단들에게 링고의 위치를 발설한다");
                 Console.WriteLine("2. 파우더 갱단들이 누구냐?");
                 Console.WriteLine("3. NCR에 대해 물어본다");
-                Console.WriteLine("[CHR 7] 4. 파우더 갱어들에게 링고가 NCR 마을 근처에서 보였다는 거짓말을 한다.");
+                Console.WriteLine("[CHR 7] [LUK 7] 4. 파우더 갱어들에게 링고가 NCR 마을 근처에서 보였다는 거짓말을 한다.");
                 Console.WriteLine("[STR 8] 5. 파우더 갱어들에게 \"정중히\" 이 마을에서 꺼지라고 말한다.");
                 Console.WriteLine("S. 마을 남쪽으로 돌아간다");
             }
@@ -58,7 +58,7 @@
                             Console.WriteLine("처음엔 그쪽 동네에서만 놀던 놈들이 점점 세력 확장을 해서 이곳 모하비 지부까지 왔어");
                             break;
                         case ConsoleKey.D4:
-                            if (Game.player.Charisma < 7)
+                            if (Game.player.Charisma < 7 || Game.player.Luck < 7)
                             {
                                 Console.WriteLine("하.. 거짓말도 못하는구나 너, 거짓말이라고 얼굴에 쓰여있어");
                                 Console.WriteLine("거짓말 칠 정도로 한가한가 보네 굿 스프링스는");

@@ -17,7 +17,10 @@ namespace OOPConsoleProject.Scene
                 Game.player.quest.Remove("챗의 상점으로 가보자");
             }
             Game.player.PrintInfo();
-            Console.WriteLine("쳇의 상점입니다.");
+            Console.WriteLine("쳇 : 내 상점에 온걸 환영해.");
+            Console.WriteLine("가진 건 많이 없지만, 나름 필요한 건 다 있다고 생각해");
+            Console.WriteLine("1. 콜라 구매");
+            Console.WriteLine("2. 보드카 구매");
         }
         public override void Input()
         {

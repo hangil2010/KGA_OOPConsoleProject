@@ -53,6 +53,8 @@ namespace OOPConsoleProject
             false,
             //5. 링고를 만나고 파우더 갱을 내보내기로 하였는가?
             false,
+            //6. 당신을 쏜 사람의 단서를 찾아냈습니까?
+            false,
         };
         public static void Run()
         {

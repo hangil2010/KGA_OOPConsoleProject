@@ -6,19 +6,15 @@ using System.Threading.Tasks;
 
 namespace OOPConsoleProject.GameObject
 {
-    public class Drink : Item
+    internal class QuestItem : Item
     {
-        private int heal;
-        
-        public Drink(string name, string desc, int heal) : base(name, desc)
+        public QuestItem(string name, string desc) : base(name, desc)
         {
-            this.heal = heal;
-            isOneTimeUse = true;
+            isOneTimeUse = false;
         }
 
         public override void Use()
         {
-            Game.player.Heal(heal);
         }
     }
 }
