@@ -29,23 +29,31 @@ namespace OOPConsoleProject.Scene
         public override void Result()
         {
             string targetScene = "";
-            switch (input)
+            if(input != ConsoleKey.I)
             {
-                case ConsoleKey.D1:
-                    Console.WriteLine("얕은 무덤을 조사합니다.");
-                    break;
-                case ConsoleKey.D2:
-                    Console.WriteLine("코요테들은 당신의 존재를 눈치채고 전투를 시작합니다.");
-                    break;
-                case ConsoleKey.N:
-                    Console.WriteLine("마을 북쪽으로 이동합니다");
-                    targetScene = "TownNorth";
-                    break;
-                default:
-                    Console.WriteLine("잘못된 키를 입력하셨습니다");
-                    break;
+                switch (input)
+                {
+                    case ConsoleKey.D1:
+                        Console.WriteLine("얕은 무덤을 조사합니다.");
+                        break;
+                    case ConsoleKey.D2:
+                        Console.WriteLine("코요테들은 당신의 존재를 눈치채고 전투를 시작합니다.");
+                        break;
+                    case ConsoleKey.N:
+                        Console.WriteLine("마을 북쪽으로 이동합니다");
+                        targetScene = "TownNorth";
+                        break;
+                    default:
+                        Console.WriteLine("잘못된 키를 입력하셨습니다");
+                        break;
+                }
             }
-            Console.ReadKey(true);
+            else
+            {
+                Game.player.Inventory.Open();
+            }
+
+                Console.ReadKey(true);
             if (targetScene != "")
             {
                 Game.ChangeScene(targetScene);

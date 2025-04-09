@@ -17,11 +17,18 @@ namespace OOPConsoleProject.Scene
         }
         public override void Input()
         {
-            Console.ReadKey();
+            input = Console.ReadKey().Key;
         }
         public override void Result()
         {
-            Game.ChangeScene("TownEast");
+            if(input != ConsoleKey.I)
+            {
+                Game.ChangeScene("TownEast");
+            }
+            else
+            {
+                Game.player.Inventory.Open();
+            }
         }
 
         public override void Update()

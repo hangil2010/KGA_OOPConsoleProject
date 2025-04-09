@@ -11,7 +11,7 @@ namespace OOPConsoleProject.Scene
         public VictorShackScene() { name = "VictorShack"; }
         public override void Input()
         {
-            Console.ReadKey();
+            input = Console.ReadKey().Key;
         }
 
         public override void Render()
@@ -24,7 +24,14 @@ namespace OOPConsoleProject.Scene
 
         public override void Result()
         {
-            Game.ChangeScene("TownWest");
+            if(input != ConsoleKey.I)
+            {
+                Game.ChangeScene("TownWest");
+            }
+            else 
+            {
+                Game.player.Inventory.Open();
+            }    
         }
 
         public override void Update()

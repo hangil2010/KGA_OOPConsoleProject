@@ -85,12 +85,14 @@ namespace OOPConsoleProject
                     break;
                 case ConsoleKey.D0:
                 case ConsoleKey.Backspace:
+                    Console.WriteLine("인벤토리 창을 종료합니다");
                     stack.Pop();
                     break;
                 default:
                     Console.WriteLine("잘못된 입력입니다.");
                     break;
             }
+            Console.ReadKey();
         }
         private void UseMenu()
         {
@@ -120,6 +122,7 @@ namespace OOPConsoleProject
         }
         private void UseItem(int index)
         {
+            
             items[index].Use();
         }
         private void DropItem() { }

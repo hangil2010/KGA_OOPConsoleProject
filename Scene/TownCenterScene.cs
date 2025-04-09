@@ -20,29 +20,37 @@
         public override void Result()
         {
             string targetScene = "";
-            switch (input)
+            if (input != ConsoleKey.I) 
             {
-                case ConsoleKey.N:
-                    Console.WriteLine("마을 북쪽으로 갑니다");
-                    targetScene = "TownNorth";
-                    break;
-                case ConsoleKey.S:
-                    Console.WriteLine("마을 남쪽으로 갑니다");
-                    targetScene = "TownSouth";
-                    break;
-                case ConsoleKey.E:
-                    Console.WriteLine("마을 동쪽으로 갑니다");
-                    targetScene = "TownEast";
-                    break;
-                case ConsoleKey.W:
-                    Console.WriteLine("마을 서쪽으로 갑니다");
-                    targetScene = "TownWest";
-                    break;
-                default:
-                    Console.WriteLine("잘못된 키를 입력하셨습니다");
-                    break;
+                switch (input)
+                {
+                    case ConsoleKey.N:
+                        Console.WriteLine("마을 북쪽으로 갑니다");
+                        targetScene = "TownNorth";
+                        break;
+                    case ConsoleKey.S:
+                        Console.WriteLine("마을 남쪽으로 갑니다");
+                        targetScene = "TownSouth";
+                        break;
+                    case ConsoleKey.E:
+                        Console.WriteLine("마을 동쪽으로 갑니다");
+                        targetScene = "TownEast";
+                        break;
+                    case ConsoleKey.W:
+                        Console.WriteLine("마을 서쪽으로 갑니다");
+                        targetScene = "TownWest";
+                        break;
+                    default:
+                        Console.WriteLine("잘못된 키를 입력하셨습니다");
+                        break;
+                }
             }
-            Console.ReadKey();
+            else
+            {
+                Game.player.Inventory.Open();
+            }
+
+                Console.ReadKey();
             if(targetScene != "")
             {
                 Game.ChangeScene(targetScene);

@@ -43,27 +43,34 @@ namespace OOPConsoleProject.Scene
         {
             Game.progess[1] = true;
             string targetScene = "";
-            switch (input) 
+            if (input != ConsoleKey.I)
             {
-                case ConsoleKey.D1:
-                    Console.WriteLine("닥 미첼의 집으로 들어갑니다");
-                    targetScene = "DocHouse";
-                    break;
-                case ConsoleKey.D2:
-                    Console.WriteLine("버려진 오두막으로 이동합니다");
-                    targetScene = "AbandonShack";
-                    break;
-                case ConsoleKey.D3:
-                    Console.WriteLine("굿 스프링스 공동묘지로 향합니다");
-                    targetScene = "Cemetry";
-                    break;
-                case ConsoleKey.C:
-                    Console.WriteLine("마을 중앙으로 이동합니다");
-                    targetScene = "TownCenter";
-                    break;
-                default:
-                    Console.WriteLine("잘못된 키를 입력하셨습니다");
-                    break;
+                switch (input)
+                {
+                    case ConsoleKey.D1:
+                        Console.WriteLine("닥 미첼의 집으로 들어갑니다");
+                        targetScene = "DocHouse";
+                        break;
+                    case ConsoleKey.D2:
+                        Console.WriteLine("버려진 오두막으로 이동합니다");
+                        targetScene = "AbandonShack";
+                        break;
+                    case ConsoleKey.D3:
+                        Console.WriteLine("굿 스프링스 공동묘지로 향합니다");
+                        targetScene = "Cemetry";
+                        break;
+                    case ConsoleKey.C:
+                        Console.WriteLine("마을 중앙으로 이동합니다");
+                        targetScene = "TownCenter";
+                        break;
+                    default:
+                        Console.WriteLine("잘못된 키를 입력하셨습니다");
+                        break;
+                }
+            }
+            else
+            {
+                Game.player.Inventory.Open();
             }
             if(targetScene != "") 
             {

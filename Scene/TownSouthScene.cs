@@ -25,25 +25,32 @@ namespace OOPConsoleProject.Scene
         }
         public override void Result()
         {
-            switch (input)
+            if(input != ConsoleKey.I)
             {
-                case ConsoleKey.D1:
-                    Console.WriteLine("굿 스프링스 물탱크로 들어갑니다");
-                    Game.ChangeScene("WaterTank");
-                    break;
-                case ConsoleKey.D2:
-                    Console.WriteLine("파우더 갱 전초기지로 이동합니다");
-                    Game.ChangeScene("PowderGang");
-                    break;
-                case ConsoleKey.C:
-                    Console.WriteLine("마을 중앙으로 이동합니다");
-                    Game.ChangeScene("TownCenter");
-                    break;
-                default:
-                    Console.WriteLine("잘못된 키를 입력하셨습니다");
-                    break;
+                switch (input)
+                {
+                    case ConsoleKey.D1:
+                        Console.WriteLine("굿 스프링스 물탱크로 들어갑니다");
+                        Game.ChangeScene("WaterTank");
+                        break;
+                    case ConsoleKey.D2:
+                        Console.WriteLine("파우더 갱 전초기지로 이동합니다");
+                        Game.ChangeScene("PowderGang");
+                        break;
+                    case ConsoleKey.C:
+                        Console.WriteLine("마을 중앙으로 이동합니다");
+                        Game.ChangeScene("TownCenter");
+                        break;
+                    default:
+                        Console.WriteLine("잘못된 키를 입력하셨습니다");
+                        break;
+                }
             }
-            Console.ReadKey();
+            else
+            {
+                Game.player.Inventory.Open();
+            }
+                Console.ReadKey();
         }
 
         public override void Update()

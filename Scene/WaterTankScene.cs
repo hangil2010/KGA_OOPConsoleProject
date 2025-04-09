@@ -23,7 +23,14 @@ namespace OOPConsoleProject.Scene
         }
         public override void Result()
         {
-            Game.ChangeScene("TownSouth");
+            if (input != ConsoleKey.I)
+            {
+                Game.ChangeScene("TownSouth");
+            }
+            else
+            {
+                Game.player.Inventory.Open();
+            }
         }
 
         public override void Update()

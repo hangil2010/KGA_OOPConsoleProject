@@ -45,6 +45,7 @@ namespace OOPConsoleProject
             PrintSpecial();
             Console.WriteLine($"현재 돈 : {caps}");
             inventory.PrintItemInfo();
+            Console.WriteLine("인벤토리 확인 : I");
             Console.WriteLine("===================================");
         }
 
