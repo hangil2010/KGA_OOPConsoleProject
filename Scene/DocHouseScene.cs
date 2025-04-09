@@ -13,7 +13,7 @@ namespace OOPConsoleProject.Scene
         {
             name = "DocHouse";
         }
-        public Drink drink = new Drink("콜라", "체력을 30 회복시켜줍니다.");
+        public Drink drink = new Drink("콜라", "체력을 30 회복시켜줍니다.", 30);
 
         public override void Render()
         {
@@ -32,6 +32,7 @@ namespace OOPConsoleProject.Scene
                 Console.WriteLine("내가 치료할 수 있다면 치료 해주지");
                 Console.WriteLine("마을 동쪽에 트루디의 술집이 있을걸세, 그 난리를 겪고 나면 술 한잔이 생각날껄세");
                 Console.WriteLine("크게 갈 곳이 없다면 그곳을 가 보는 것도 좋겠네.");
+                Game.player.quest.Add("트루디의 술집으로 가보자");
                 Console.WriteLine("무사히 일어났으니 단 게 먹고 싶을 걸세, 여기 냉장고에 하나 가져가게");
                 Game.player.Inventory.Add(drink);
                 Console.WriteLine("그리고 어디 물건 살때 필요할 캡도 좀 주겠네");

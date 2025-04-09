@@ -12,6 +12,10 @@ namespace OOPConsoleProject.Scene
 
         public override void Render()
         {
+            if(Game.player.quest.Contains("마을 북쪽의 오두막에 가보자."))
+            {
+                Game.player.quest.Remove("마을 북쪽의 오두막에 가보자.");
+            }
             Game.player.PrintInfo();
             Console.WriteLine("버려진 오두막");
             if (Game.progess[4])
@@ -60,6 +64,7 @@ namespace OOPConsoleProject.Scene
                                 Console.WriteLine("혹시 미친 소리일 수도 있지만, 파우더 갱을 이 마을에서 쫓아낼 수 있어?");
                                 Console.WriteLine("너 정도의 능력이면 이 마을에 평화를 되찾을 수 있을 것 같아");
                                 Console.WriteLine("쫒아내 준다면 내가 어떻게든 보상할께, 가진걸 다 잃어서 지금 많이는 없지만 본부로 무사히 돌아간다면 크게 보상해줄께");
+                                Game.player.quest.Add("굿 스프링스와 파우더 갱 사이의 문제를 해결하자");
                                 Game.progess[5] = true;
                                 break;
                             case ConsoleKey.N:

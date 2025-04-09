@@ -76,6 +76,7 @@ namespace OOPConsoleProject
 
         public static void End()
         {
+            Console.Clear();
             Console.WriteLine("게임 끝");
         }
 

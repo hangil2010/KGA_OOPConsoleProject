@@ -12,6 +12,10 @@ namespace OOPConsoleProject.Scene
         
         public override void Render()
         {
+            if(Game.player.quest.Contains("챗의 상점으로 가보자"))
+            {
+                Game.player.quest.Remove("챗의 상점으로 가보자");
+            }
             Game.player.PrintInfo();
             Console.WriteLine("쳇의 상점입니다.");
         }

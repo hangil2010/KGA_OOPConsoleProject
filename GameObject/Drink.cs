@@ -8,13 +8,15 @@ namespace OOPConsoleProject.GameObject
 {
     public class Drink : Item
     {
-        public Drink(string name, string desc) : base(name, desc)
+        private int heal;
+        public Drink(string name, string desc, int heal) : base(name, desc)
         {
+            this.heal = heal;
         }
 
         public override void Use()
         {
-            Game.player.Heal(30);
+            Game.player.Heal(heal);
         }
     }
 }

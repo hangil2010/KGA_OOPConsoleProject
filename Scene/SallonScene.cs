@@ -5,10 +5,14 @@ namespace OOPConsoleProject.Scene
     internal class SallonScene : BaseScene
     {
         public SallonScene() { name = "Sallon"; }
-        public Drink drink = new Drink("위스키", "체력을 50 회복시켜줍니다");
+        public Drink drink = new Drink("위스키", "체력을 50 회복시켜줍니다", 50);
 
         public override void Render()
         {
+            if(Game.player.quest.Contains("트루디의 술집으로 가보자"))
+            {
+                Game.player.quest.Remove("트루디의 술집으로 가보자");
+            }
             Game.player.PrintInfo();
             Console.WriteLine("탄광꾼의 술집에 들어갔습니다.");
             Console.WriteLine("트루디가 주인으로 운영하고 있습니다.");
@@ -88,6 +92,7 @@ namespace OOPConsoleProject.Scene
                             {
                                 Console.WriteLine("잠깐, 머리에 총을 맞고도 술마시러 올 정도의 사람이라면, 너가 이 문제를 해결할 수 있을 것 같아");
                                 Console.WriteLine("링고한테 가서 말을 걸어봐, 오두막으로 가서 바닥을 잘 살펴보면 숨겨진 문이 있을 꺼야");
+                                Game.player.quest.Add("마을 북쪽의 오두막에 가보자.");
                                 Game.progess[4] = true;
                             }
                             break;

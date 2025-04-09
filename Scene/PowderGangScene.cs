@@ -41,13 +41,21 @@
                     switch (input)
                     {
                         case ConsoleKey.D1:
-                            Console.WriteLine("1번 텍스트");
+                            Console.WriteLine("그래.. 링고 그놈이 거기에 숨어있었다고?");
+                            Console.WriteLine("그게 사실이라면 지금까지 거짓말을 해왔다는 거네");
+                            Console.WriteLine("하.. 조용히 갈려고 했는데 안되겠네, 굿 스프링스를 우리 본거지로 만들러 간다");
+                            Console.WriteLine("너는 좋은 정보원이야, 우리 갱단에 합류해서 같이 마을을 지배하러 가자");
+                            Game.GameClear = true;
                             break;
                         case ConsoleKey.D2:
-                            Console.WriteLine("2번 텍스트");
+                            Console.WriteLine("우리? 우리들 소문을 못 들어본거면 어디 벙커 밑에서 살다가 왔나?");
+                            Console.WriteLine("저기 근처에 NCR 교도소에서 단체로 탈옥해서 우리를 가둔 NCR에게 복수하려고 하는 집단이다");
+                            Console.WriteLine("나는 대장 조 콥이라고 한다.");
                             break;
                         case ConsoleKey.D3:
-                            Console.WriteLine("3번 텍스트");
+                            Console.WriteLine("NCR? 그놈들이 우리가 감옥에 간 이유지");
+                            Console.WriteLine("저기 캘리포니아 쪽에서 핵전쟁 이후 새로 세운 나라야");
+                            Console.WriteLine("처음엔 그쪽 동네에서만 놀던 놈들이 점점 세력 확장을 해서 이곳 모하비 지부까지 왔어");
                             break;
                         case ConsoleKey.D4:
                             if (Game.player.Charisma < 7)

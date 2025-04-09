@@ -39,13 +39,15 @@ namespace OOPConsoleProject
         public int Caps { get { return caps; } set { caps = value; } }
         private Inventory inventory = new();
         public Inventory Inventory { get { return inventory; } }
+        public List<string> quest = new();
         public void PrintInfo()
         {
-            Console.WriteLine("===================================");
+            Console.WriteLine("캐릭터 상태========================");
             PrintSpecial();
-            Console.WriteLine($"현재 돈 : {caps}");
-            inventory.PrintItemInfo();
+            Console.WriteLine($"현재 돈(캡) : {caps}");
             Console.WriteLine("인벤토리 확인 : I");
+            Console.WriteLine("보유 퀘스트------------------------");
+            PrintQuest();
             Console.WriteLine("===================================");
         }
 
@@ -102,7 +104,20 @@ namespace OOPConsoleProject
             Console.WriteLine($"힘 : {strength}, 감각 : {percepction}, 근성 : {endurance}, 매력 : {charisma}, 지능 : {intelligence}, 민첩 : {agility}, 행운 : {luck}");
             Console.WriteLine($"최대 체력 : {maxHealth}, 현재 체력 : {currentHealth}");
         }
-
+        public void PrintQuest()
+        {
+            if(quest.Count > 0)
+            {
+                foreach (string str in quest)
+                {
+                    Console.WriteLine(str);
+                }
+            }
+            else
+            {
+                Console.WriteLine("현재 보유한 퀘스트가 없습니다.");
+            }
+        }
         public void Heal(int healAmount)
         {
             currentHealth += healAmount;

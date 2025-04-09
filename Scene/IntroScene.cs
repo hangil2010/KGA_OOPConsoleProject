@@ -19,7 +19,7 @@ namespace OOPConsoleProject.Scene
             //Util.Print("당신은 모하비 지부의 배달부로써 매일매일 살아가고 있었다.\n");
             //Util.Print("그러나 어느 날 Mr.House라는 한 부자가 플래티넘 칩이라는 특이한 물품을 배달해달라고 부탁했다.\n");
             //Util.Print("그때 당신은 몰랐다.. 그 칩이 어떤 일을 불러올지\n");
-            
+
             //Util.Print("예정대로 배달을 진행하던 도중, 굿 스프링스에서 기습을 당하였다.\n");
             //Util.Print("정신을 차려보니, 어느 흰 체크무늬 남성과 두 부하가 앞에 있었다.\n");
             //Util.Print("손과 입은 천으로 단단히 묶여있었다. 주변을 둘러보니 공동묘지였다...\n\n");
@@ -59,6 +59,7 @@ namespace OOPConsoleProject.Scene
             //Util.Print("몸을 확인해보니 머리에 총상을 입었고, 기적적으로 목숨을 붙이고는 있어서 수술을 진행했다네.\n");
             //Util.Print("마을에서 나가기 전에 몸 상태에 대해 간단한 검진만 하면 된다네.\n");
             //Util.Print("실험의 목적은 아니고, 너 몸 상태를 기록만 해둘려고 해, 혹여나 다시 올 때를 대비해서\n", delay : 0);
+            Console.WriteLine("테스트 텍스트");
             Console.WriteLine("============================================");
             Console.WriteLine("아무 키나 눌러 진행...");
         }
