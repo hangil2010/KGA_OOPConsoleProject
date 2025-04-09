@@ -18,7 +18,10 @@ namespace OOPConsoleProject.Scene
         public override void Render()
         {
             Game.player.PrintInfo();
-            if (!Game.progess[1])
+            // 캐릭터를 생성하고 나갔을 때 빅터가 나와서 특별한 대사를 하게 함
+            // 1회성 대사로 이후에는 나오지 않게 한다.
+            // progress[1] : 빅터를 처음 만났는가?
+            if (!Game.progess[1]) 
             {
                 //Util.Print("빅터", textColor : ConsoleColor.Green);
                 //Util.Print(" : 오 친구! 깨어났네!\n");
@@ -38,6 +41,7 @@ namespace OOPConsoleProject.Scene
         }
         public override void Result()
         {
+            Game.progess[1] = true;
             string targetScene = "";
             switch (input) 
             {
@@ -71,7 +75,6 @@ namespace OOPConsoleProject.Scene
 
         public override void Update()
         {
-            Game.progess[1] = true;
         }
     }
 }

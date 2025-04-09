@@ -6,6 +6,7 @@
 
         public override void Render()
         {
+            Game.player.PrintInfo();
             if (Game.progess[5])
             {
                 Console.WriteLine("당신은 죽을 위협을 무릅쓰고 파우더 갱에게 다가갑니다.");

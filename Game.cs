@@ -39,18 +39,17 @@ namespace OOPConsoleProject
         public static Player player = new Player();
 
         // 게임 진행도 체크용
-        // 1. 신규 캐릭터를 생성했나?
         public static bool[] progess = new bool[]
         {
             //0. 신규 캐릭터를 생성했나?
             false,
-            //1. 빅터와 첫 대화를 나눴나?
+            //1. 빅터를 처음 만났나?
             false,
             //2. 술집에서 조 콥의 소동을 목격했는가?
             false,
             //3. 술집의 라디오를 고쳤는가?
             false,
-            //4. 트루디한테 링고의 위치에 대해 들었는가?
+            //4. 트루디한테 링고의 위치에 대해 들었는가?                                 
             false,
             //5. 링고를 만나고 파우더 갱을 내보내기로 하였는가?
             false,

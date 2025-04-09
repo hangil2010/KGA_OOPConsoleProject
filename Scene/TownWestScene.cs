@@ -12,6 +12,7 @@ namespace OOPConsoleProject.Scene
 
         public override void Render()
         {
+            Game.player.PrintInfo();
             Console.WriteLine("굿 스프링스 마을 서쪽입니다");
             Console.WriteLine("1. 빅터의 오두막으로 갑니다");
             Console.WriteLine("C. 마을 중앙으로 갑니다");

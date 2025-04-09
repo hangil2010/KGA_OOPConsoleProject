@@ -5,6 +5,7 @@
         public TownCenterScene() { name = "TownCenter"; }
         public override void Render()
         {
+            Game.player.PrintInfo();
             Console.WriteLine("굿 스프링스 마을 중심지이다.");
             Console.WriteLine("N : 북쪽으로 가기");
             Console.WriteLine("S : 남쪽으로 가기");

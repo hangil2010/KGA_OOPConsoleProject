@@ -12,6 +12,7 @@ namespace OOPConsoleProject.Scene
         
         public override void Render()
         {
+            Game.player.PrintInfo();
             Console.WriteLine("쳇의 상점입니다.");
         }
         public override void Input()

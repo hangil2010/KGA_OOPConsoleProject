@@ -14,13 +14,13 @@ namespace OOPConsoleProject
         private int percepction = 0;
         public int Percepction { get { return percepction; } set { percepction = value; } }
 
-        private int endurance = 0;
+        private int endurance = 8;
         public int Endurance { get { return endurance; } set { endurance = value; } }
 
         private int charisma = 8;
         public int Charisma { get { return charisma; } set { charisma = value; } }
 
-        private int intelligence = 0;
+        private int intelligence = 8;
         public int Intelligence { get { return intelligence; } set { intelligence = value; } }
 
         private int agility = 0;
@@ -34,10 +34,17 @@ namespace OOPConsoleProject
 
         private int currentHealth;
         public int CurrentHealth { get { return currentHealth; } set {  currentHealth = value; } }
+
+        private int caps = 100;
+        public int Caps { get { return caps; } set { caps = value; } }
+        private Inventory inventory = new();
+        public Inventory Inventory { get { return inventory; } }
         public void PrintInfo()
         {
             Console.WriteLine("===================================");
             PrintSpecial();
+            Console.WriteLine($"현재 돈 : {caps}");
+            inventory.PrintItemInfo();
             Console.WriteLine("===================================");
         }
 
@@ -93,6 +100,15 @@ namespace OOPConsoleProject
         {
             Console.WriteLine($"힘 : {strength}, 감각 : {percepction}, 근성 : {endurance}, 매력 : {charisma}, 지능 : {intelligence}, 민첩 : {agility}, 행운 : {luck}");
             Console.WriteLine($"최대 체력 : {maxHealth}, 현재 체력 : {currentHealth}");
+        }
+
+        public void Heal(int healAmount)
+        {
+            currentHealth += healAmount;
+            if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
         }
     }
 }

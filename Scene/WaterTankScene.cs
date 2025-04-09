@@ -13,6 +13,7 @@ namespace OOPConsoleProject.Scene
 
         public override void Render()
         {
+            Game.player.PrintInfo();
             Console.WriteLine("마을 남쪽에 위치한 물 저장소이다.");
         }
 

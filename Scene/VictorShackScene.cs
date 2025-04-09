@@ -16,6 +16,7 @@ namespace OOPConsoleProject.Scene
 
         public override void Render()
         {
+            Game.player.PrintInfo();
             Console.WriteLine("빅터의 오두막");
             Console.WriteLine("나를 구해줬던 친절한 이웃이 살고 있는 집이다.");
 
