@@ -16,11 +16,11 @@ namespace OOPConsoleProject.Scene
         {
             Game.player.PrintInfo();
             Util.Print("굿 스프링스 공동묘지\n");
-            Util.Print("얕게 묻힌 무덤이 보이고 금방 파내진듯 한 모습입니다.");
-            Util.Print("직감적으로 저곳이 자신이 뭍힐뻔한 곳임을 눈치챘습니다.");
-            Util.Print("1. 얕은 무덤을 조사한다");
-            Util.Print("2. 저 멀리 시체를 파고 있는 변종 코요태에게 다가간다");
-            Util.Print("N. 굿 스프링스 마을 북쪽으로 돌아갑니다.");
+            Util.Print("얕게 묻힌 무덤이 보이고 금방 파내진듯 한 모습입니다.\n");
+            Util.Print("직감적으로 저곳이 자신이 뭍힐뻔한 곳임을 눈치챘습니다.\n");
+            Console.WriteLine("1. 얕은 무덤을 조사한다");
+            Console.WriteLine("2. 저 멀리 시체를 파고 있는 변종 코요태에게 다가간다");
+            Console.WriteLine("N. 굿 스프링스 마을 북쪽으로 돌아갑니다.");
 
         }
         public override void Input()
@@ -39,9 +39,9 @@ namespace OOPConsoleProject.Scene
                         if (!Game.progess[6]) 
                         { 
                             Console.WriteLine("얕은 무덤을 조사합니다.");
-                            Util.Print("근처를 둘러보니 최근에 누가 핀 담배가 보였습니다.");
-                            Util.Print("최근에 핀 것을 보아 당신을 쐈던 사람들 중 한명이 핀 것을 알아차립니다.");
-                            Util.Print("단서를 찾아낸 당신은 담배를 주머니에 넣습니다.");
+                            Util.Print("근처를 둘러보니 최근에 누가 핀 담배가 보였습니다.\n");
+                            Util.Print("최근에 핀 것을 보아 당신을 쐈던 사람들 중 한명이 핀 것을 알아차립니다.\n");
+                            Util.Print("단서를 찾아낸 당신은 담배를 주머니에 넣습니다.\n");
                             Game.player.quest.Remove("당신을 쏜 사람을 찾아보자.");
                             Game.player.Inventory.Add(cigar);
                             Game.progess[6] = true;

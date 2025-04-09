@@ -16,9 +16,9 @@ namespace OOPConsoleProject.Scene
 
         public override void Render()
         {
-            Util.Print("새로운 캐릭터를 생성합니다");
-            Util.Print("캐릭터의 능력치를 설정합니다.");
-            Util.Print("아무 키나 눌러 진행하세요");
+            Util.Print("새로운 캐릭터를 생성합니다\n");
+            Util.Print("캐릭터의 능력치를 설정합니다.\n");
+            Util.Print("아무 키나 눌러 진행하세요\n");
         }
         public override void Input()
         {

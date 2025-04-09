@@ -48,8 +48,8 @@ namespace OOPConsoleProject.Scene
                     Util.Print("건강하게 잘 지내는걸 보니 다행이군.");
                 }
             }
-            Util.Print("마을 밖으로 나간다");
-            Util.Print("아무 키나 눌러 진행");
+            Console.WriteLine("마을 밖으로 나간다");
+            Console.WriteLine("아무 키나 눌러 진행");
         }
         public override void Input()
         {
