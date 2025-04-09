@@ -19,7 +19,7 @@ namespace OOPConsoleProject.Scene
             Game.player.PrintInfo();
             Console.WriteLine("빅터의 오두막");
             Console.WriteLine("나를 구해줬던 친절한 이웃이 살고 있는 집이다.");
-
+            Console.WriteLine("빅터는 지금 어디 나간 듯 하다. 집에 아무도 없는거 같다.");
         }
 
         public override void Result()

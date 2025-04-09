@@ -1,6 +1,7 @@
 ﻿using OOPConsoleProject.Scene;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Linq;
 using System.Security;
@@ -29,6 +30,7 @@ namespace OOPConsoleProject
             {"WaterTank", new WaterTankScene() },
             {"Intro", new IntroScene() },
             {"ChetShop", new ChetShopScene() },
+            {"Battle", new BattleScene() },
         };
         private static BaseScene curScene;
         private static string prevSceneName;
@@ -39,6 +41,7 @@ namespace OOPConsoleProject
         public static Player player = new Player();
 
         // 게임 진행도 체크용
+        // 진행도에 따라 특정 대사가 출력되게 함.
         public static bool[] progess = new bool[]
         {
             //0. 신규 캐릭터를 생성했나?
@@ -61,6 +64,7 @@ namespace OOPConsoleProject
             Start();
             while (gameOver == false && gameClear == false)
             {
+                //일련의 게임 플레이 사이클
                 Console.Clear();
                 curScene.Render();
                 curScene.Input();
@@ -79,11 +83,19 @@ namespace OOPConsoleProject
         public static void End()
         {
             Console.Clear();
-            Console.WriteLine("게임 끝");
+            if (gameOver == true)
+            {
+                Console.WriteLine("게임 패배..");
+            }
+            else if (gameClear == true)
+            {
+                Console.WriteLine("게임 클리어!");
+            }
         }
 
         public static void ChangeScene(string sceneName)
         {
+            // 씬 변경
             prevSceneName = curScene.name;
             curScene.Exit();
             curScene = sceneDic[sceneName];
