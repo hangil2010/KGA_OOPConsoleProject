@@ -20,8 +20,10 @@ namespace OOPConsoleProject.Scene
                 Game.player.quest.Remove("챗의 상점으로 가보자");
             }
             Game.player.PrintInfo();
-            Util.Print("쳇 : 내 상점에 온걸 환영해.");
-            Util.Print("가진 건 많이 없지만, 나름 필요한 건 다 있다고 생각해");
+            Util.Print("쳇", textColor: ConsoleColor.Cyan, delay : 0);
+            Util.Print(": 내 상점에 온걸 환영해.\n");
+            Util.Print("쳇", textColor: ConsoleColor.Cyan, delay : 0);
+            Util.Print(":가진 건 많이 없지만, 나름 필요한 건 다 있다고 생각해\n");
             Console.WriteLine("1. 사이다 구매, 가격 : 100 캡");
             Console.WriteLine("2. 위스키 구매, 가격 : 150 캡");
             Console.WriteLine("E. 마을 동쪽으로 돌아갑니다.");
@@ -39,25 +41,29 @@ namespace OOPConsoleProject.Scene
                     case ConsoleKey.D1:
                         if(Game.player.Caps >= 100)
                         {
-                            Console.WriteLine("사이다 하나 대령합니다");
+                            Util.Print("쳇", textColor: ConsoleColor.Cyan, delay: 0);
+                            Console.WriteLine(": 사이다 하나 대령합니다");
                             Game.player.Caps -= 100;
                             Game.player.Inventory.Add(cider);
                         }
                         else
                         {
-                            Console.WriteLine("돈이 없는 거 같은데? 돈을 좀 모아서 와");
+                            Util.Print("쳇", textColor: ConsoleColor.Cyan, delay: 0);
+                            Console.WriteLine(": 돈이 없는 거 같은데? 돈을 좀 모아서 와");
                         }
                         break;
                     case ConsoleKey.D2:
                         if (Game.player.Caps >= 150)
                         {
-                            Console.WriteLine("위스키 하나 대령합니다");
+                            Util.Print("쳇", textColor: ConsoleColor.Cyan, delay: 0);
+                            Console.WriteLine(": 위스키 하나 대령합니다");
                             Game.player.Caps -= 150;
                             Game.player.Inventory.Add(cider);
                         }
                         else
                         {
-                            Console.WriteLine("돈이 없는 거 같은데? 돈을 좀 모아서 와");
+                            Util.Print("쳇", textColor: ConsoleColor.Cyan, delay: 0);
+                            Console.WriteLine(": 돈이 없는 거 같은데? 돈을 좀 모아서 와");
                         }
                         break;
                     case ConsoleKey.E:

@@ -54,14 +54,20 @@ namespace OOPConsoleProject.Scene
                         case ConsoleKey.D1:
                             Util.Print("소동을 확인해보니 경찰 조끼를 입은 남성이 트루디에게 시비를 걸고 있었습니다\n");
                             Util.Print("??? : 링고 이놈이 여기 굿스프링스로 도망치는 걸 봤단 말이야.\n");
-                            Util.Print("    : 당장 위치를 안 말하면 내가 이 마을을 쑥대맡으로 만들꺼야\n");
-                            Util.Print("트루디 : 내가 말했지, 그놈에 대해 하나도 모른다고\n");
-                            Util.Print("       : 설령 내가 알아도 너같은 범죄자들한테 말할꺼 같아?\n");
-                            Util.Print("       : 그럼 뭐 살꺼 아니면 당장 이 술집에서 나가\n");
+                            Util.Print("??? : 당장 위치를 안 말하면 내가 이 마을을 쑥대맡으로 만들꺼야\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 내가 말했지, 그놈에 대해 하나도 모른다고\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 설령 내가 알아도 너같은 범죄자들한테 말할꺼 같아?\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 그럼 뭐 살꺼 아니면 당장 이 술집에서 나가\n");
                             Console.ReadKey();
-                            Util.Print("하.. 겨우 조용해졌네, 내 술집에 온걸 환영해 배달부\n");
-                            Util.Print("빅터한테 들었어, 머리에 총상을 맞고도 살아남았다고\n");
-                            Util.Print("술 한잔 마시면서 기억을 복돋아보는건 어때?\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 하.. 겨우 조용해졌네, 내 술집에 온걸 환영해 배달부\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 빅터한테 들었어, 머리에 총상을 맞고도 살아남았다고\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 술 한잔 마시면서 기억을 복돋아보는건 어때?\n");
                             Game.progess[2] = true;
                             break;
                         case ConsoleKey.E:
@@ -79,19 +85,27 @@ namespace OOPConsoleProject.Scene
                     switch (input)
                     {
                         case ConsoleKey.D1:
-                            Util.Print("나도 잘 모르겠어, 이 마을의 모든 일은 다 알고 있다 생각했는데 온 줄도 몰랐어\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 나도 잘 모르겠어, 이 마을의 모든 일은 다 알고 있다 생각했는데 온 줄도 몰랐어\n");
                             break;
                         case ConsoleKey.D2:
-                            Util.Print("아 저놈? 근처 NCR 감옥에서 반란을 일으키고 그곳을 본거지로 한 집단들이 있어.\n");
-                            Util.Print("자기들을 파우더 갱이라고 부르더라고\n");
-                            Util.Print("그 중 조 콥이란 저 사람은 파우더 갱의 리더로 최근 한 남자를 쫓고 있어\n");
-                            Util.Print("링고라는 남성인데 파우더 갱한테 자신의 팀원들이 몰살당하고 겨우 이 마을로 도망쳐왔어\n");
-                            Util.Print("그 뒤로 마을 북쪽에 있는 오두막에 링고를 숨겨둔 뒤로 하루가 멀다하고 협박을 하러 오네\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 아 저놈? 근처 NCR 감옥에서 반란을 일으키고 그곳을 본거지로 한 집단들이 있어.\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 자기들을 파우더 갱이라고 부르더라고\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 그 중 조 콥이란 저 사람은 파우더 갱의 리더로 최근 한 남자를 쫓고 있어\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 링고라는 남성인데 파우더 갱한테 자신의 팀원들이 몰살당하고 겨우 이 마을로 도망쳐왔어\n");
+                            Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                            Util.Print(": 그 뒤로 마을 북쪽에 있는 오두막에 링고를 숨겨둔 뒤로 하루가 멀다하고 협박을 하러 오네\n");
                             // 마을의 문제를 해결하기로 했다.
                             if (!Game.progess[4])
                             {
-                                Util.Print("잠깐, 머리에 총을 맞고도 술마시러 올 정도의 사람이라면, 너가 이 문제를 해결할 수 있을 것 같아\n");
-                                Util.Print("링고한테 가서 말을 걸어봐, 오두막으로 가서 바닥을 잘 살펴보면 숨겨진 문이 있을 꺼야\n");
+                                Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                                Util.Print(": 잠깐, 머리에 총을 맞고도 술마시러 올 정도의 사람이라면, 너가 이 문제를 해결할 수 있을 것 같아\n");
+                                Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                                Util.Print(": 링고한테 가서 말을 걸어봐, 오두막으로 가서 바닥을 잘 살펴보면 숨겨진 문이 있을 꺼야\n");
                                 Game.player.quest.Add("마을 북쪽의 오두막에 가보자.");
                                 Game.progess[4] = true;
                             }
@@ -106,7 +120,8 @@ namespace OOPConsoleProject.Scene
                             {
                                 Console.WriteLine("당신은 능숙하게 라디오 내부의 고장난 부품을 납땜해나갑니다");
                                 Console.WriteLine("몇 번의 납땜 이후 라디오에서 소리가 들려나오기 시작합니다");
-                                Console.WriteLine("트루디 : 라디오를 고쳐줘서 고마워, 너의 노력에 대한 선물이야");
+                                Util.Print("트루디", textColor: ConsoleColor.DarkGreen, delay: 0);
+                                Console.WriteLine(": 라디오를 고쳐줘서 고마워, 너의 노력에 대한 선물이야");
                                 Game.player.Caps += 200;
                                 Console.WriteLine("200캡을 획득하였습니다.");
                                 Game.player.Inventory.Add(drink);

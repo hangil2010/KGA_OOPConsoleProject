@@ -23,11 +23,14 @@ namespace OOPConsoleProject.Scene
             // progress[1] : 빅터를 처음 만났는가?
             if (!Game.progess[1]) 
             {
-                //Util.Print("빅터", textColor : ConsoleColor.Green);
-                //Util.Print(" : 오 친구! 깨어났네!\n");
-                //Util.Print("미첼 박사님은 좋은 의사선생님이야, 마을의 모든 의료시설을 담당할 정도로 유능하신 분이지\n");
-                //Util.Print("난 마을 서쪽 오두막에서 살고 있어, 만나고 싶을 때 와서 만나면 될꺼야\n");
-                //Util.Print("그럼 이만!\n");
+                Util.Print("빅터", textColor: ConsoleColor.Green);
+                Util.Print(": 오 친구! 깨어났네!\n");
+                Util.Print("빅터", textColor: ConsoleColor.Green);
+                Util.Print("미첼 박사님은 좋은 의사선생님이야, 마을의 모든 의료시설을 담당할 정도로 유능하신 분이지\n");
+                Util.Print("빅터", textColor: ConsoleColor.Green);
+                Util.Print("난 마을 서쪽 오두막에서 살고 있어, 만나고 싶을 때 와서 만나면 될꺼야\n");
+                Util.Print("빅터", textColor: ConsoleColor.Green);
+                Util.Print("그럼 이만!\n");
                 Game.player.quest.Add("챗의 상점으로 가보자");
             }
             Console.WriteLine("굿 스프링스 마을 북쪽");
