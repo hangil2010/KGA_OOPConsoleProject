@@ -27,12 +27,11 @@ namespace OOPConsoleProject
 
         private int luck = 1;
         public int Luck { get { return luck; } set { luck = value; } }
-
-        private int specialPoints = 35;
+        private int specialPoints = 45;
         public int SpecialPoints { get { return specialPoints; } }
         public void SetSpecial()
         {
-            int limit = 9;
+            PrintSpecial();
             Console.WriteLine("Strength, 줄여서 STR는 근접 무기 피해량과 인벤토리 크기에 관여합니다");
             Console.WriteLine("특정 무기는 일정 STR를 넘겨야 착용이 가능합니다");
             Console.WriteLine($"남은 능력치 설정 가능 수치 : {specialPoints}");
@@ -64,7 +63,7 @@ namespace OOPConsoleProject
             {
                 if (specialPoints < 10)
                 {
-                    limit = specialPoints;
+                    int limit = specialPoints;
                     charisma += Util.IntInput(1, limit);
                     specialPoints -= charisma;
                 }
@@ -74,7 +73,6 @@ namespace OOPConsoleProject
                     specialPoints -= charisma;
                 }
             }
-            else { }
             Console.Clear();
 
             PrintSpecial();
@@ -85,7 +83,7 @@ namespace OOPConsoleProject
             {
                 if (specialPoints < 10)
                 {
-                    limit = specialPoints;
+                    int limit = specialPoints;
                     intelligence += Util.IntInput(1, limit);
                     specialPoints -= intelligence;
                 }
@@ -95,7 +93,6 @@ namespace OOPConsoleProject
                     specialPoints -= intelligence;
                 }
             }
-            else { }
             Console.Clear();
 
             PrintSpecial();
@@ -106,7 +103,7 @@ namespace OOPConsoleProject
             {
                 if (specialPoints < 10)
                 {
-                    limit = specialPoints;
+                    int limit = specialPoints;
                     agility += Util.IntInput(1, limit);
                     specialPoints -= agility;
                 }
@@ -116,7 +113,6 @@ namespace OOPConsoleProject
                     specialPoints -= agility;
                 }
             }
-            else { }
             Console.Clear();
 
             PrintSpecial();
@@ -127,7 +123,7 @@ namespace OOPConsoleProject
             {
                 if (specialPoints < 10)
                 {
-                    limit = specialPoints;
+                    int limit = specialPoints;
                     luck += Util.IntInput(1, limit);
                     specialPoints -= luck;
                 }
@@ -137,9 +133,38 @@ namespace OOPConsoleProject
                     specialPoints -= luck;
                 }
             }
-            else { }
             Console.Clear();
 
+            SetLeftOvers();
+
+            Console.WriteLine("최종 능력치");
+            PrintSpecial();
+            Console.WriteLine("현재 능력치에 만족하십니까? Y / N");
+            switch (Console.ReadKey(true).Key)
+            {
+                case ConsoleKey.Y:
+                    Console.WriteLine("진행합니다");
+                    break;
+                case ConsoleKey.N:
+                    Console.Clear();
+                    Console.WriteLine("캐릭터 생성을 다시 진행합니다.");
+                    specialPoints = 45;
+                    strength = 1;
+                    percepction = 1;
+                    endurance = 1;
+                    charisma = 1;
+                    intelligence = 1;
+                    agility = 1;
+                    luck = 1;
+                    SetSpecial();
+                    break;
+                default:
+                    Console.WriteLine("잘못 입력하였습니다");
+                    break;
+            }
+        }
+        private void SetLeftOvers()
+        {
             int leftovers = 0;
             while (specialPoints > 0)
             {
@@ -157,8 +182,8 @@ namespace OOPConsoleProject
                     // 2-2. 남은 스페셜 포인트가 그 차이를 채울 수 없는 경우
                     // -남은 스페셜 포인트를 전부 그 능력치에 부여함
                     case 1:
-                        if (strength >= 10) { }
-                        else
+                        Console.WriteLine("STR를 증가시킵니다.");
+                        if (strength < 10) 
                         {
                             if (strength + specialPoints >= 10)
                             {
@@ -168,12 +193,13 @@ namespace OOPConsoleProject
                             }
                             else
                             {
-                                strength += specialPoints;
+                                strength += Util.IntInput(1, specialPoints);
                                 specialPoints -= specialPoints;
                             }
                         }
                         break;
                     case 2:
+                        Console.WriteLine("PER를 증가시킵니다");
                         if (percepction >= 10) { }
                         else
                         {
@@ -185,12 +211,13 @@ namespace OOPConsoleProject
                             }
                             else
                             {
-                                percepction += specialPoints;
+                                percepction += Util.IntInput(1, specialPoints);
                                 specialPoints -= specialPoints;
                             }
                         }
                         break;
                     case 3:
+                        Console.WriteLine("END를 증가시킵니다.");
                         if (endurance >= 10) { }
                         else
                         {
@@ -202,12 +229,13 @@ namespace OOPConsoleProject
                             }
                             else
                             {
-                                endurance += specialPoints;
+                                endurance += Util.IntInput(1, specialPoints);
                                 specialPoints -= specialPoints;
                             }
                         }
                         break;
                     case 4:
+                        Console.WriteLine("CHR를 증가시킵니다.");
                         if (charisma >= 10) { }
                         else
                         {
@@ -219,12 +247,13 @@ namespace OOPConsoleProject
                             }
                             else
                             {
-                                charisma += specialPoints;
+                                charisma += Util.IntInput(1, specialPoints);
                                 specialPoints -= specialPoints;
                             }
                         }
                         break;
                     case 5:
+                        Console.WriteLine("INT를 증가시킵니다.");
                         if (intelligence >= 10) { }
                         else
                         {
@@ -236,12 +265,13 @@ namespace OOPConsoleProject
                             }
                             else
                             {
-                                intelligence += specialPoints;
+                                intelligence += Util.IntInput(1, specialPoints);
                                 specialPoints -= specialPoints;
                             }
                         }
                         break;
                     case 6:
+                        Console.WriteLine("AGL를 증가시킵니다");
                         if (agility >= 10) { }
                         else
                         {
@@ -253,12 +283,13 @@ namespace OOPConsoleProject
                             }
                             else
                             {
-                                agility += specialPoints;
+                                agility += Util.IntInput(1, specialPoints);
                                 specialPoints -= specialPoints;
                             }
                         }
                         break;
                     case 7:
+                        Console.WriteLine("LUK를 증가시킵니다");
                         if (luck >= 10) { }
                         else
                         {
@@ -270,7 +301,7 @@ namespace OOPConsoleProject
                             }
                             else
                             {
-                                luck += specialPoints;
+                                luck += Util.IntInput(1, specialPoints);
                                 specialPoints -= specialPoints;
                             }
                         }
@@ -278,31 +309,6 @@ namespace OOPConsoleProject
                 }
                 // 해당 능력치가 10이 아닌지 체크한다
                 // 10이 아닐경우 1부터 합이 10이 되는 값 이하의 값을 받아 더한다.
-            }
-            Console.WriteLine("최종 능력치");
-            PrintSpecial();
-            Console.WriteLine("현재 능력치에 만족하십니까? Y / N");
-            switch (Console.ReadKey(true).Key)
-            {
-                case ConsoleKey.Y:
-                    Console.WriteLine("진행합니다");
-                    break;
-                case ConsoleKey.N:
-                    Console.Clear();
-                    Console.WriteLine("캐릭터 생성을 다시 진행합니다.");
-                    specialPoints = 35;
-                    strength = 1;
-                    percepction = 1;
-                    endurance = 1;
-                    charisma = 1;
-                    intelligence = 1;
-                    percepction = 1;
-                    luck = 1;
-                    SetSpecial();
-                    break;
-                default:
-                    Console.WriteLine("잘못 입력하였습니다");
-                    break;
             }
         }
         public void PrintSpecial()

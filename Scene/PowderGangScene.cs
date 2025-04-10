@@ -93,6 +93,7 @@
                                 Util.Print(": 시간이 부족하다, 저 쪼그만 마을은 나중에 해결하고 우선 그곳으로 옮긴다\n");
                                 Util.Print("조 콥", textColor: ConsoleColor.Yellow, delay: 0);
                                 Util.Print(": 갔는데 거짓말이면, 너랑 저 마을 둘다 지도에서 없애버릴꺼다\n");
+                                Game.progess[7] = true;
                                 Game.GameClear = true;
                             }
                             break;
@@ -120,6 +121,7 @@
                                 Util.Print(": 아.. 굿 스프링스에 이런 인재가 있었을 줄이면 감히 안 건드렸죠 ㅎㅎ\n");
                                 Util.Print("조 콥", textColor: ConsoleColor.Yellow, delay: 0);
                                 Util.Print(": 다시는 이 마을을 안 건드리겠습니다 제발 떄리지 말아주세요..\n");
+                                Game.progess[8] = true;
                                 Game.GameClear = true;
                             }
                             break;

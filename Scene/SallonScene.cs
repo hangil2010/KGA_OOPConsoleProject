@@ -47,6 +47,7 @@ namespace OOPConsoleProject.Scene
             string targetScene = "";
             if (input != ConsoleKey.I)
             {
+                // 술집의 소란을 목격했는가
                 if (!Game.progess[2])
                 {
                     switch (input)

@@ -44,6 +44,7 @@ namespace OOPConsoleProject.Scene
                             Util.Print("단서를 찾아낸 당신은 담배를 주머니에 넣습니다.\n");
                             Game.player.quest.Remove("당신을 쏜 사람을 찾아보자.");
                             Game.player.Inventory.Add(cigar);
+                            // 당신을 쏜 사람에 대한 단서를 알아냈습니다.
                             Game.progess[6] = true;
                         }
                         else

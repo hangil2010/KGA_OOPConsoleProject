@@ -1,12 +1,4 @@
 ﻿using OOPConsoleProject.Scene;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Data;
-using System.Linq;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOPConsoleProject
 {
@@ -35,7 +27,7 @@ namespace OOPConsoleProject
         private static BaseScene curScene;
         private static string prevSceneName;
         private static bool gameOver;
-        public static bool GameOver {  get { return gameOver; } set { gameOver = value; } }
+        public static bool GameOver { get { return gameOver; } set { gameOver = value; } }
         private static bool gameClear;
         public static bool GameClear { get { return gameClear; } set { gameClear = value; } }
         public static Player player = new Player();
@@ -58,7 +50,45 @@ namespace OOPConsoleProject
             false,
             //6. 당신을 쏜 사람의 단서를 찾아냈습니까?
             false,
+            //7. 파우더 갱단의 문제를 평화적으로 해결하였는가
+            false,
+            //8. 파우더 갱단의 문제를 물리적으로 해결하였는가
+            false,
         };
+        public static void End()
+        {
+            Console.Clear();
+            if (gameOver == true)
+            {
+                Console.WriteLine("게임 패배..");
+            }
+            else if (gameClear == true)
+            {
+                // 분기별 엔딩
+                Console.WriteLine("게임 클리어!");
+                if (progess[3] == false)
+                {
+                    Console.WriteLine("아쉽게도 트루디는 라디오를 고치지 못하였고, 결국 새로 구매하였습니다");
+                }
+                else
+                {
+                    Console.WriteLine("트루디는 라디오로 세상 이야기를 다시 들을 수 있게 되었습니다.");
+                }
+                if (progess[7] == true)
+                {
+                    Console.WriteLine("당신은 마을의 문제를 평화적으로 해결하였습니다!");
+                }
+                if (progess[8] == true)
+                {
+                    Console.WriteLine("당신은 마을의 문제를 당신의 물리적인 힘으로 해결하였습니다!");
+                }
+                if (progess[6] == true)
+                {
+                    Console.WriteLine("당신을 쏜 사람들에 대한 단서를 찾았습니다.");
+                }
+            }
+        }
+
         public static void Run()
         {
             Start();
@@ -80,18 +110,7 @@ namespace OOPConsoleProject
             curScene = sceneDic["Title"];
         }
 
-        public static void End()
-        {
-            Console.Clear();
-            if (gameOver == true)
-            {
-                Console.WriteLine("게임 패배..");
-            }
-            else if (gameClear == true)
-            {
-                Console.WriteLine("게임 클리어!");
-            }
-        }
+
 
         public static void ChangeScene(string sceneName)
         {

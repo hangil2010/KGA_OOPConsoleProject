@@ -18,8 +18,10 @@ namespace OOPConsoleProject.Scene
             }
             Game.player.PrintInfo();
             Console.WriteLine("버려진 오두막");
+            // 트루디한테 마을 북쪽에 링고가 있다는 것을 알았는가?
             if (Game.progess[4])
             {
+                // 링고를 만났는가
                 if (!Game.progess[5]) 
                 {
                     Util.Print("바닥을 훑어보니 열 수 있을 것 같은 문이 보입니다.\n");
@@ -47,8 +49,10 @@ namespace OOPConsoleProject.Scene
             string targetScene = "";
             if(input != ConsoleKey.I)
             {
+                // 트루디한테 마을 북쪽에 링고가 있다는 것을 알았는가?
                 if (Game.progess[4])
                 {
+                    // 링고를 만났는가
                     if (!Game.progess[5])
                     {
                         switch (input)
@@ -73,6 +77,7 @@ namespace OOPConsoleProject.Scene
                                 Util.Print("링고", textColor: ConsoleColor.Magenta, delay: 0);
                                 Util.Print(": 쫒아내 준다면 내가 어떻게든 보상할께, 가진걸 다 잃어서 지금 많이는 없지만 본부로 무사히 돌아간다면 크게 보상해줄께\n");
                                 Game.player.quest.Add("굿 스프링스와 파우더 갱 사이의 문제를 해결하자");
+                                // 굿 스프링스와 파우더 갱 사이 문제를 해결하기로 했다.
                                 Game.progess[5] = true;
                                 break;
                             case ConsoleKey.N:
