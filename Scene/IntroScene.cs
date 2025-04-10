@@ -59,7 +59,7 @@ namespace OOPConsoleProject.Scene
             Util.Print("몸을 확인해보니 머리에 총상을 입었고, 기적적으로 목숨을 붙이고는 있어서 수술을 진행했다네.\n");
             Util.Print("마을에서 나가기 전에 몸 상태에 대해 간단한 검진만 하면 된다네.\n");
             Util.Print("실험의 목적은 아니고, 너 몸 상태를 기록만 해둘려고 해, 혹여나 다시 올 때를 대비해서\n", delay: 0);
-            //Console.WriteLine("테스트 텍스트");
+            Console.WriteLine("테스트 텍스트");
             Console.WriteLine("============================================");
             Console.WriteLine("아무 키나 눌러 진행...");
         }
