@@ -71,7 +71,7 @@
                             Util.Print(": 처음엔 그쪽 동네에서만 놀던 놈들이 점점 세력 확장을 해서 이곳 모하비 지부까지 왔어\n");
                             break;
                         case ConsoleKey.D4:
-                            if (Game.player.Charisma < 7 || Game.player.Luck < 7)
+                            if (Game.player.Special.Charisma < 7 || Game.player.Special.Charisma < 7)
                             {
                                 Util.Print("조 콥", textColor: ConsoleColor.Yellow, delay: 0);
                                 Util.Print(": 하.. 거짓말도 못하는구나 너, 거짓말이라고 얼굴에 쓰여있어\n");
@@ -97,7 +97,7 @@
                             }
                             break;
                         case ConsoleKey.D5:
-                            if (Game.player.Strength < 8)
+                            if (Game.player.Special.Charisma < 8)
                             {
                                 Util.Print("조 콥", textColor: ConsoleColor.Yellow, delay: 0);
                                 Util.Print(": 뭐? 당장 이 마을을 꺼지라고? 거 참 웃긴 말이네\n");

@@ -27,7 +27,7 @@ namespace OOPConsoleProject.Scene
         public override void Result()
         {
             Console.Clear();
-            Game.player.SetSpecial();
+            Game.player.Special.SetSpecial();
             Game.ChangeScene("DocHouse");
         }
 

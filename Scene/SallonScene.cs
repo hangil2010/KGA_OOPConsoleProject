@@ -111,7 +111,7 @@ namespace OOPConsoleProject.Scene
                             }
                             break;
                         case ConsoleKey.D3:
-                            if (Game.player.Intelligence < 7)
+                            if (Game.player.Special.Charisma < 7)
                             {
                                 Console.WriteLine("고쳐보려고 라디오를 이리 저리 둘러보았으나 해결할 방법이 생각나지 않습니다.");
                                 Console.WriteLine("괜히 문제를 일으키고 싶지 않아 내려놓습니다.");
